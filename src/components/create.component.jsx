@@ -11,7 +11,7 @@ class Create extends Component {
     this.onChangeNICNumber = this.onChangeNICNumber.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
-    this.state = {
+    this.setState = {
       person_name: '',
       business_name: '',
       nic_no: ''
