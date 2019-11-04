@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Create from './components/create.component';
 import Edit from './components/edit.component';
 import Index from './components/index.component';
+// import 'bootstrap/dist/css/bootstrap.css';
+// import NavBar from './components/common/navbar';
 
 function App() {
   return (
@@ -14,7 +16,7 @@ function App() {
             MERN CRUD
           </Link>
 
-          <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+          <div className='navbar-collapse' id='navbarSupportedContent'>
             <ul className='navbar-nav mr-auto'>
               <li className='nav-item'>
                 <Link to={'/'} className='nav-link'>
@@ -43,7 +45,7 @@ function App() {
           </div>
         </nav>
         <br></br>
-        <h2>Welcome to MERN CRUD</h2>
+        <p>Welcome to MERN CRUD</p>
 
         <Switch>
           <Route exact path='/create' component={Create} />
