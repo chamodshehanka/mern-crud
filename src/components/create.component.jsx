@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Create extends Component {
   state = {};
@@ -37,8 +38,16 @@ class Create extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    // something
-    console.log(this.state.person_name);
+    // save to DB
+    const obj = {
+      person_name: this.state.person_name,
+      business_name: this.state.business_name,
+      nic_no: this.state.nic_no
+    };
+
+    axios
+      .post('http://localhost:4000/business/add', obj)
+      .then(res => console.log(res.data));
 
     this.setState({
       state: {
