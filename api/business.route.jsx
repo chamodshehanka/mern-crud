@@ -23,6 +23,7 @@ businessRoute.route('/').get(function(req, res) {
   Business.find(function(err, business) {
     if (err) {
       console.log(err);
+      // res.json(err);
     } else {
       res.json(business);
     }
